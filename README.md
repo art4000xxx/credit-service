@@ -60,3 +60,4 @@ GET /credit-applications/{id}/status
 
 ```bash
 cd credit-service
+Автор:art4000xxx
