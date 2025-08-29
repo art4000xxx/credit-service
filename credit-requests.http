@@ -1,0 +1,37 @@
+### Создание заявки на кредит (должно одобрить)
+POST http://localhost:8080/credit-applications
+Content-Type: application/json
+
+{
+  "loanAmount": 100000,
+  "loanTerm": 12,
+  "income": 50000,
+  "currentDebt": 10000,
+  "creditScore": 700
+}
+
+###
+
+### Создание заявки на кредит (должно отказать)
+POST http://localhost:8080/credit-applications
+Content-Type: application/json
+
+{
+  "loanAmount": 50000,
+  "loanTerm": 12,
+  "income": 40000,
+  "currentDebt": 25000,
+  "creditScore": 600
+}
+
+###
+
+### Получение статуса заявки по ID=1
+GET http://localhost:8080/credit-applications/1/status
+Accept: application/json
+
+###
+
+### Получение статуса заявки по ID=2
+GET http://localhost:8080/credit-applications/2/status
+Accept: application/json
